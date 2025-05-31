@@ -1,0 +1,163 @@
+.navbar-brand {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.playlist-title {
+    text-align: center;
+    color:  cyan;
+    margin-bottom: 20px;
+}
+.bye{
+  color: cyan;
+}
+.hello {
+    text-align: center;
+    color:  cyan;
+    margin-bottom: 20px;
+}
+.display-4,.lead{
+  color: cyan;
+}
+.lead{
+  font-size: 25px;
+}
+
+.new{
+  font-size: 15px;
+}
+body {
+  background-color: #0d1117;
+  color: #c9d1d9;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Jumbotron styling */
+.jumbotron {
+  background-color: #1f2937;
+  color: #c9d1d9;
+  border-radius: 15px;
+  padding: 2rem 2rem;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+}
+
+/* Image styling */
+.img-fluid {
+  max-height: 300px;
+  object-fit: cover;
+  border: 2px solid #007bff;
+  padding: 5px;
+  background-color: #121c2c;
+  transition: transform 0.3s ease;
+}
+
+.img-fluid:hover {
+  transform: scale(1.05);
+}
+
+/* Container spacing override if needed */
+.container {
+  margin-top: 3rem;
+}
+img.img-fluid {
+    max-width: 100%;
+    height: auto;
+    max-height: 200px; /* reduce if still too tall */
+    border: none !important;
+    outline: none !important;
+  }
+table th, table td {
+    color: white;
+}
+.custom-navbar {
+    background-color: #001f3f;
+}
+
+.navbar-nav .nav-link,
+.navbar-brand {
+    color: cyan!important;
+    font-size: 18px;
+}
+
+.btn-outline-light {
+    border-color: #00d9ff;
+    color: #00d9ff;
+}
+
+.btn-outline-light:hover {
+    background-color: #00d9ff;
+    color: #001f3f;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #e0e0e0;
+    background-color: #0a0a0a;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    color: #4db8ff; /* light blue */
+}
+
+.container, .content-box {
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #1a1a2e;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #d0d0d0;
+}
+.jumbotron pre {
+    color: white;
+  }
+.requirements h2 {
+  color: cyan;
+}
+.requirements pre {
+  margin: 0;
+  font-size: 1.1rem; /* Increased from 0.9rem */
+  line-height: 1.6;
+  background-color: #040b13;
+  padding: 1rem;
+  border-radius: 8px;
+  height: 90%;
+}
+.content-box {
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #1a1a2e; /* Dark background for unified box */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    margin-bottom: 2rem;
+}
+
+.search-heading {
+    color: cyan;
+    margin-top: 10px;
+}
+
+form.form-inline input,
+form.form-inline button {
+    font-size: 1rem;
+    padding: 6px 12px;
+}
+.content-text h1 {
+  color: cyan;
+}
+h1 {
+  color: #ffffff;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.new {
+    font-size: 1.1rem;
+    line-height: 1.4;
+  }
+.navbar-brand{
+  font-size: 30px;
+}

@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>My Views - Music Playlist Manager</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+  <link rel="stylesheet" href="/static/style.css" />
+
+  <style>
+    body {
+      background-color: #121212;
+      color: white;
+    }
+
+    .navbar {
+      background-color: #001f3f;
+    }
+
+    .navbar-brand,
+    .nav-link {
+      color: cyan !important;
+      font-weight: 500;
+    }
+
+    .content-wrapper {
+      max-width: 900px;
+      margin: 3rem auto;
+      background-color: #1b1a2e;
+      /* Restored original background */
+      border-radius: 15px;
+      padding: 2rem;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      position: relative;
+    }
+
+    .profile-img {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      max-width: 150px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    }
+
+    .content-text {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      text-align: left;
+    }
+
+    h1 {
+      color: #ffffff;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: transparent;">
+    <a class="navbar-brand" href="/"><strong>🎵 Music Playlist Manager</strong></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/about">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/myviews">My Views</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/techused">Technologies Used</a>
+            </li>
+        </ul>
+
+        <!-- Search form aligned to the right -->
+        <form class="form-inline ml-auto" method="get" action="/search">
+            <input class="form-control mr-sm-2" type="search" name="search" placeholder="Search The Song" required>
+            <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
+
+  <!-- Main Content -->
+  <div class="content-wrapper">
+    <img src="/static/Photo/dp2.jpeg" alt="Profile" class="profile-img" />
+
+    <div class="content-text">
+      <h1>My Views</h1>
+
+      <p>
+        <strong style="color: cyan;">Music Playlist Manager 🎵 </strong><br />
+        <strong style="color: cyan;">Project by:- Amlan Biswal</strong> <span style="color: cyan;"></span><br />
+        <strong style="color: cyan;">Roll No:-24/B07/012</strong> <span style="color: cyan;"></span>
+      </p>
+
+      <p>Hey everyone! 👋</p>
+
+      <p>This is my project titled <strong>Music Playlist Manager</strong>. You can find more details about it in the
+        About section.</p>
+
+      <p>
+        For the frontend, I’ve used a combination of <strong>HTML</strong>, <strong>CSS</strong>, and a bit of
+        <strong>JavaScript</strong> to build a clean and user-friendly interface.
+        On the backend, I’ve used <strong>Flask</strong>, a third-party Python module, to handle the server-side logic.
+        The database is managed using <strong>SQLite</strong>, which provides a simple yet effective way to store
+        playlist data.
+      </p>
+
+      <p>
+        I would like to express my sincere thanks to <strong>CodeWithHarry</strong>, whose tutorials were incredibly
+        helpful throughout this project.
+      </p>
+
+      <p>
+        This is my first web development project, so while there might be some bugs or areas for improvement,
+        I’ve genuinely put in my best effort to make it functional and user-friendly. I hope it proves useful and gives
+        a smooth experience to all users.
+      </p>
+
+      <p>Thanks for checking it out! 😊</p>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
