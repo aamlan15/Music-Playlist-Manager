@@ -1,105 +1,51 @@
-<!DOCTYPE html>
-<html>
+{% extends 'base.html' %}
+{% block title %}Search Results{% endblock title %}
+{% block body %}
+<div class="container mt-4">
+    <div class="content-box">
+        <h1 class="search-heading text-center mb-4">Search Results for "{{ query }}"</h1>
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="/static/style.css">
-
-    <title>{% block title %}Search Results{% endblock title %} - Music Playlist Manager</title>
-</head>
-
-<body>
-
-    <!-- Navbar -->
-   <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: transparent;">
-    <a class="navbar-brand" href="/"><strong>🎵 Music Playlist Manager</strong></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-            <li class="nav-item active">
-                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/about">About</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/myviews">My Views</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/techused">Technologies Used</a>
-            </li>
-        </ul>
-
-        <!-- Search form aligned to the right -->
-        <form class="form-inline ml-auto" method="get" action="/search">
-            <input class="form-control mr-sm-2" type="search" name="search" placeholder="Search The Song" required>
-            <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
-        </form>
-    </div>
-</nav>
-
-    <!-- Unified Box: Search + Heading + Results -->
-    <div class="container mt-4">
-        <div class="content-box">
-            
-
-            <h1 class="search-heading text-center mb-4">Search Results for "{{ query }}"</h1>
-
-            {% if songs %}
-            <div class="table-responsive">
-                <table class="table table-bordered table-hover">
-                    <thead class="thead-dark">
-                        <tr>
-                            <th scope="col">Sno.</th>
-                            <th scope="col">Song Name</th>
-                            <th scope="col">Song Movie</th>
-                            <th scope="col">Singer/Singers</th>
-                            <th scope="col">Written By</th>
-                            <th scope="col">Music By</th>
-                            <th scope="col">Genre</th>
-                            <th scope="col">Music Label</th>
-                            <th scope="col">Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% for song in songs %}
-                        <tr>
-                            <th scope="row">{{ loop.index }}</th>
-                            <td>{{ song.name }}</td>
-                            <td>{{ song.movie }}</td>
-                            <td>{{ song.artist }}</td>
-                            <td>{{ song.write }}</td>
-                            <td>{{ song.music }}</td>
-                            <td>{{ song.genre }}</td>
-                            <td>{{ song.label }}</td>
-                            <td>
-                                <a href="/update/{{ song.sno }}" class="btn btn-success btn-sm my-1">Update</a>
-                                <a href="/delete/{{ song.sno }}" class="btn btn-danger btn-sm my-1">Delete</a>
-                            </td>
-                        </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
-            </div>
-            {% else %}
-            <div class="alert alert-warning text-center" role="alert">
-                No Song Found 😢
-            </div>
-            {% endif %}
+        {% if songs %}
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Sno.</th>
+                        <th>Song Name</th>
+                        <th>Song Movie</th>
+                        <th>Singer/Singers</th>
+                        <th>Written By</th>
+                        <th>Music By</th>
+                        <th>Genre</th>
+                        <th>Music Label</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for song in songs %}
+                    <tr>
+                        <th scope="row">{{ loop.index }}</th>
+                        <td>{{ song.name }}</td>
+                        <td>{{ song.movie }}</td>
+                        <td>{{ song.artist }}</td>
+                        <td>{{ song.write }}</td>
+                        <td>{{ song.music }}</td>
+                        <td>{{ song.genre }}</td>
+                        <td>{{ song.label }}</td>
+                        <td>
+                            <a href="/update/{{ song.sno }}" class="btn btn-success btn-sm my-1">Update</a>
+                            <a href="/delete/{{ song.sno }}" class="btn btn-danger btn-sm my-1">Delete</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
         </div>
+        {% else %}
+        <div class="alert alert-warning text-center" role="alert">
+            No Song Found 😢
+        </div>
+        {% endif %}
     </div>
-
-    <script src="/static/script.js"></script>
-</body>
-
-</html>
+</div>
+{% endblock body %}
